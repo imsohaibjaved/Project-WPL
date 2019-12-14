@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master-page.master.cs" Inherits="Project_WPL.master_page" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container">
+                <a href="home.aspx" class="navbar-brand">AUIC Sports Event</a>
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="home.aspx" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="games.aspx" class="nav-link">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="schedule.aspx" class="nav-link">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rules.aspx" class="nav-link">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.aspx" class="nav-link">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- CONTENT PLACE HOLDER FOR ADDING CONTENT BETWEEN HEADER AND FOOTER -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="main-footer" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="py-4">
+                            <h1 class="h3">AUIC Sports Event</h1>
+                            <p>Copyright &copy; 2020</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </form>
+</body>
+</html>
